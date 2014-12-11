@@ -1,0 +1,37 @@
+name: NoobLoginPlugin
+version: 123
+main: com.noob.login.NoobLogin
+description: A Simple Login Plugin
+commands:
+  nooblogin:
+    description: Base Command For N00BLogin
+    aliases: [nl, noob]
+  register:
+    description: NoobLogin Register command!
+  login:
+    description: NoobLogin Login command!
+    aliases: [l]
+  changepass:
+    description: NoobLogin ChangePass Command!
+    aliases: [changepassword, changepwd]
+  unregister:
+    description: NoobLogin UnRegister Command!
+permissions:
+  nooblogin.*:
+    description: Give access to all of nooblogin commands.
+    children:
+      nooblogin.register:
+        description: Allows you to use register command.
+        default: not op
+      nooblogin.login:
+        description: Allows you to use login command.
+        default: not op
+      nooblogin.unregister:
+        description: Allows you to use unregister command.
+        default: op
+      nooblogin.changepwd:
+        description: Allows you to use changepass command.
+        default: not op
+      nooblogin.reload:
+        description: Allows you to reload the config.
+        default: op
